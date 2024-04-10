@@ -44,6 +44,8 @@ public class UsuarioService {
                 }
         );
 
+        validarDadosUsuario(usuarioRequest);
+
         UsuarioEntity usuario = new UsuarioEntity();
         usuario.setId(null);
         usuario.setNomeUsuario(usuarioRequest.nomeUsuario());
@@ -69,5 +71,23 @@ public class UsuarioService {
 
     private UsuarioResponse usuarioResponse(UsuarioEntity usuario) {
         return new UsuarioResponse(usuario.getId(), usuario.getNomeUsuario(), usuario.getPapel().getNome());
+    }
+
+    private void validarDadosUsuario(UsuarioRequest usuario) throws Exception {
+        if (usuario.nomeUsuario() == null|| usuario.nomeUsuario().isBlank() || usuario.nomeUsuario().length() < 3) {
+            log.error("Nome de usuário inválido.");
+            throw new BadRequestException(
+                    "Nome de usuário inválido. "+
+                    "Nome de usuário não pode estar em branco e tem que ter no mínimo 3 caracteres."
+            );
+        }
+
+        if(usuario.senha() == null|| usuario.senha().isBlank() || usuario.senha().length() < 3){
+            log.error("Senha inválida.");
+            throw new BadRequestException(
+                    "Senha inválida. "+
+                    "Senha não pode estar em branco e tem que ter no mínimo 3 caracteres."
+            );
+        }
     }
 }
