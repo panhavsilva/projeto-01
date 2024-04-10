@@ -41,7 +41,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET,"/teste").permitAll()
-                        .requestMatchers(HttpMethod.POST, new String[]{"/cadastro", "/login"}).permitAll()
+                        .requestMatchers(HttpMethod.POST, new String[]{"/login"}).permitAll()
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
