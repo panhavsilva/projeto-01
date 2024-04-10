@@ -17,9 +17,6 @@ public class UsuarioEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String nome;
-
     @Column(name = "nome_usuario", length = 50, nullable = false, unique = true)
     private String nomeUsuario;
 
