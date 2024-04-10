@@ -13,6 +13,7 @@ import org.apache.coyote.BadRequestException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -53,6 +54,17 @@ public class UsuarioService {
         log.info("Usuário cadastrado com sucesso.");
 
         return usuarioResponse(novoUsuario);
+    }
+
+    public List<UsuarioResponse> buscarTodos() {
+        log.info("Buscando usuários.");
+        List<UsuarioEntity> usuariosEntity = usuarioRepository.findAll();
+        List<UsuarioResponse> usuarios = new ArrayList<>();
+        for (UsuarioEntity usuario : usuariosEntity) {
+            usuarios.add(usuarioResponse(usuario));
+        }
+        log.info("Foram encontrados {} usuários.", usuarios.size());
+        return usuarios;
     }
 
     private UsuarioResponse usuarioResponse(UsuarioEntity usuario) {
