@@ -3,12 +3,10 @@ package com.senai.projeto01.exception;
 import com.senai.projeto01.exception.dto.Erro;
 import org.apache.coyote.BadRequestException;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
 public class GlobalAdvice {
@@ -49,12 +47,11 @@ public class GlobalAdvice {
     }
 
     @ExceptionHandler(AccessDeniedException.class)
-    @ResponseStatus(HttpStatus.FORBIDDEN)
     public ResponseEntity<?> handler(AccessDeniedException e) {
         Erro erro = Erro.builder()
                 .codigo("403")
                 .mensagem("Acesso negado. " + e.getMessage())
                 .build();
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(erro);
+        return ResponseEntity.status(403).body(erro);
     }
 }

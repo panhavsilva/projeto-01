@@ -41,7 +41,10 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET,"/teste").permitAll()
-                        .requestMatchers(HttpMethod.POST, new String[]{"/login"}).permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/cadastro/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/usuarios/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers("/docentes/**").hasAuthority("SCOPE_ADMIN")
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
