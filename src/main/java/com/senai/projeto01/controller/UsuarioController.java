@@ -22,14 +22,12 @@ public class UsuarioController {
     private final UsuarioService service;
 
     @PostMapping("/cadastro")
-    @PreAuthorize("hasAuthority('SCOPE_ADMIN')")
     public ResponseEntity<UsuarioResponse> post(@RequestBody UsuarioRequest usuarioRequest) throws Exception {
         log.info("POST /cadastro - solicitação recebida para realizar cadastro de novo usuário.");
         return ResponseEntity.status(HttpStatus.CREATED).body(service.criarUsuario(usuarioRequest));
     }
 
     @GetMapping("/usuarios")
-    @PreAuthorize("hasAuthority('SCOPE_ADMIN')")
     public ResponseEntity<List<UsuarioResponse>> get() {
         log.info("GET /usuarios - solicitação recebida para buscar todos os usuários.");
         return ResponseEntity.ok().body(service.buscarTodos());
