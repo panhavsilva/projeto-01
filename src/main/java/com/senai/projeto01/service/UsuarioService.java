@@ -33,7 +33,9 @@ public class UsuarioService {
             throw new BadRequestException("Usuário já cadastrado.");
         }
 
-        PapelEntity papel =  papelRepository.findByNome(usuarioRequest.nomePapel()).orElseThrow(
+        PapelEntity papel =  papelRepository.findByNome(
+                usuarioRequest.nomePapel().toUpperCase()
+        ).orElseThrow(
                 () -> {
                     List<String> papeis = papelRepository.findAllPapelNames();
                     log.error("Nenhum papel encontrado com o nome informado.");
@@ -59,7 +61,7 @@ public class UsuarioService {
     }
 
     public List<UsuarioResponse> buscarTodos() {
-        log.info("Buscando usuários.");
+        log.info("Buscando todos os usuários.");
         List<UsuarioEntity> usuariosEntity = usuarioRepository.findAll();
         List<UsuarioResponse> usuarios = new ArrayList<>();
         for (UsuarioEntity usuario : usuariosEntity) {
@@ -69,11 +71,25 @@ public class UsuarioService {
         return usuarios;
     }
 
+    public UsuarioResponse buscarPorId(Long id) {
+        log.info("Buscando usuário com id {}.", id);
+        UsuarioEntity usuarioEntity = usuarioRepository.findById(id).orElseThrow(
+                () -> {
+                    log.error("Nenhum usuário encontrado com o id: {}.", id);
+                    return new NotFoundException("Nenhum usuário encontrado com o id: " + id);
+                }
+        );
+        UsuarioResponse usuario = usuarioResponse(usuarioEntity);
+        log.info("Usuário encontrado com sucesso.");
+        return usuario;
+    }
+
     private UsuarioResponse usuarioResponse(UsuarioEntity usuario) {
         return new UsuarioResponse(usuario.getId(), usuario.getNomeUsuario(), usuario.getPapel().getNome());
     }
 
     private void validarDadosUsuario(UsuarioRequest usuario) throws Exception {
+        log.info("Validando dados do usuário.");
         if (usuario.nomeUsuario() == null|| usuario.nomeUsuario().isBlank() || usuario.nomeUsuario().length() < 3) {
             log.error("Nome de usuário inválido.");
             throw new BadRequestException(
