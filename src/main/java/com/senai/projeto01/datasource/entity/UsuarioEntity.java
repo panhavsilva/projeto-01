@@ -17,14 +17,14 @@ public class UsuarioEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nome_usuario", length = 50, nullable = false, unique = true)
+    @Column(name = "nome_usuario", length = 100, nullable = false, unique = true)
     private String nomeUsuario;
 
     @Column(length = 100, nullable = false)
     private String senha;
 
     @ManyToOne
-    @JoinColumn(name = "papel_id")
+    @JoinColumn(name = "id_papel", nullable = false)
     private PapelEntity papel;
 
     public boolean senhaValida(LoginRequest loginRequest, BCryptPasswordEncoder bCryptEncoder) {
