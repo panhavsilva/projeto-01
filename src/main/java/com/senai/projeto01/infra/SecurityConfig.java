@@ -45,8 +45,10 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/cadastro/**").hasAuthority("SCOPE_ADMIN")
                         .requestMatchers(HttpMethod.GET, "/usuarios/**").hasAuthority("SCOPE_ADMIN")
                         .requestMatchers("/docentes/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/cursos/**").hasAnyAuthority(
+                                "SCOPE_PEDAGOGICO", "SCOPE_ADMIN"
+                        )
                         .requestMatchers("/cursos/**").hasAuthority("SCOPE_ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/cursos/**").hasAuthority("SCOPE_PEDAGOGICO")
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
