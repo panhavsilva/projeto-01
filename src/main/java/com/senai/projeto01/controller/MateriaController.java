@@ -48,6 +48,6 @@ public class MateriaController {
     public ResponseEntity<String> delete(@PathVariable Long id){
         log.info("DELETE /materias/:id - solicitação recebida para excluir matéria com id {}.", id);
         service.excluir(id);
-        return ResponseEntity.ok().body("Matéria excluído com sucesso");
+        return ResponseEntity.ok().body("Matéria excluída com sucesso");
     }
 }
