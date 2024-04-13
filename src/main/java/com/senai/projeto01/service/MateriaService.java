@@ -2,7 +2,7 @@ package com.senai.projeto01.service;
 
 import com.senai.projeto01.controller.dto.request.MateriaRequest;
 import com.senai.projeto01.controller.dto.response.CursoResponse;
-import com.senai.projeto01.controller.dto.response.MateriaResponse;
+import com.senai.projeto01.controller.dto.response.MateriaComCursoResponse;
 import com.senai.projeto01.datasource.entity.CursoEntity;
 import com.senai.projeto01.datasource.entity.MateriaEntity;
 import com.senai.projeto01.datasource.repository.CursoRepository;
@@ -24,10 +24,10 @@ public class MateriaService {
     private final CursoService cursoService;
     private final CursoRepository cursoRepository;
 
-    public List<MateriaResponse> buscarTodos() {
+    public List<MateriaComCursoResponse> buscarTodos() {
         log.info("Buscando todas os matérias.");
         List<MateriaEntity> materiaEntityList = materiaRepository.findAll();
-        List<MateriaResponse> materiaResponseList = new ArrayList<>();
+        List<MateriaComCursoResponse> materiaResponseList = new ArrayList<>();
         for (MateriaEntity materia : materiaEntityList) {
             materiaResponseList.add(materiaResponse(materia));
         }
@@ -35,7 +35,7 @@ public class MateriaService {
         return materiaResponseList;
     }
 
-    public MateriaResponse buscarPorId(Long id) {
+    public MateriaComCursoResponse buscarPorId(Long id) {
         log.info("Buscando matéria com id: {}.", id);
         MateriaEntity materiaEntity = materiaRepository.findById(id).orElseThrow(
                 () -> {
@@ -43,12 +43,12 @@ public class MateriaService {
                     return new NotFoundException("Nenhuma matéria encontrada com o id: " + id);
                 }
         );
-        MateriaResponse materia = materiaResponse(materiaEntity);
+        MateriaComCursoResponse materia = materiaResponse(materiaEntity);
         log.info("Matéria com id: {} encontrada com sucesso.", id);
         return materia;
     }
 
-    public MateriaResponse criarNovoMateria(MateriaRequest materiaRequest) throws Exception {
+    public MateriaComCursoResponse criarNovoMateria(MateriaRequest materiaRequest) throws Exception {
         log.info("Criando nova matéria.");
         validarDadosMateria(materiaRequest);
 
@@ -58,7 +58,7 @@ public class MateriaService {
         return materiaResponse(materia);
     }
 
-    public MateriaResponse atualizar(Long id, MateriaRequest materiaRequest) throws Exception {
+    public MateriaComCursoResponse atualizar(Long id, MateriaRequest materiaRequest) throws Exception {
         log.info("Atualizando matéria.");
         buscarPorId(id);
         validarDadosMateria(materiaRequest);
@@ -76,10 +76,10 @@ public class MateriaService {
         log.info("Matéria com id {} excluída sucesso.", id);
     }
 
-    private MateriaResponse materiaResponse(MateriaEntity materia) {
+    private MateriaComCursoResponse materiaResponse(MateriaEntity materia) {
         CursoEntity cursoEntity = materia.getCurso();
         CursoResponse cursoResponse = new CursoResponse(cursoEntity.getId(), cursoEntity.getNome());
-        return new MateriaResponse(materia.getId(), materia.getNome(), cursoResponse);
+        return new MateriaComCursoResponse(materia.getId(), materia.getNome(), cursoResponse);
     }
 
     private void validarDadosMateria(MateriaRequest materia) throws Exception {
