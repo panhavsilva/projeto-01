@@ -49,6 +49,10 @@ public class SecurityConfig {
                         .requestMatchers("/cursos/**").hasAnyAuthority(
                                 "SCOPE_PEDAGOGICO", "SCOPE_ADMIN"
                         )
+                        .requestMatchers(HttpMethod.DELETE, "/materias/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers("/materias/**").hasAnyAuthority(
+                                "SCOPE_PEDAGOGICO", "SCOPE_ADMIN"
+                        )
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
