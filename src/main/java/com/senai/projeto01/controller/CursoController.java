@@ -1,6 +1,7 @@
 package com.senai.projeto01.controller;
 
 import com.senai.projeto01.controller.dto.request.CursoRequest;
+import com.senai.projeto01.controller.dto.response.CursoMateriasResponse;
 import com.senai.projeto01.controller.dto.response.CursoResponse;
 import com.senai.projeto01.service.CursoService;
 import lombok.RequiredArgsConstructor;
@@ -27,6 +28,15 @@ public class CursoController {
     public ResponseEntity<CursoResponse> getPorId(@PathVariable Long id){
         log.info("GET /cursos/:id - solicitação recebida para buscar curso com id {}.", id);
         return ResponseEntity.ok().body(service.buscarPorId(id));
+    }
+
+    @GetMapping("{id}/materias")
+    public ResponseEntity<CursoMateriasResponse> getPorIdComMaterias(@PathVariable Long id){
+        log.info(
+                "GET /cursos/:id/materias - solicitação recebida para buscar curso com id {} e suas matérias.",
+                id
+        );
+        return ResponseEntity.ok().body(service.buscarPorIdComMaterias(id));
     }
 
     @PostMapping

@@ -1,9 +1,13 @@
 package com.senai.projeto01.service;
 
 import com.senai.projeto01.controller.dto.request.CursoRequest;
+import com.senai.projeto01.controller.dto.response.CursoMateriasResponse;
 import com.senai.projeto01.controller.dto.response.CursoResponse;
+import com.senai.projeto01.controller.dto.response.MateriaResponse;
 import com.senai.projeto01.datasource.entity.CursoEntity;
+import com.senai.projeto01.datasource.entity.MateriaEntity;
 import com.senai.projeto01.datasource.repository.CursoRepository;
+import com.senai.projeto01.datasource.repository.MateriaRepository;
 import com.senai.projeto01.exception.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CursoService {
     private final CursoRepository cursoRepository;
+    private final MateriaRepository materiaRepository;
 
     public List<CursoResponse> buscarTodos() {
         log.info("Buscando todos os cursos.");
@@ -39,6 +44,19 @@ public class CursoService {
                 }
         );
         CursoResponse curso = cursoResponse(cursoEntity);
+        log.info("Curso com id: {} encontrado com sucesso.", id);
+        return curso;
+    }
+
+    public CursoMateriasResponse buscarPorIdComMaterias(Long id) {
+        log.info("Buscando curso com id: {}.", id);
+        CursoEntity cursoEntity = cursoRepository.findById(id).orElseThrow(
+                () -> {
+                    log.error("Nenhum curso encontrado com o id: {}.", id);
+                    return new NotFoundException("Nenhum curso encontrado com o id: " + id);
+                }
+        );
+        CursoMateriasResponse curso = cursoMateriasResponse(cursoEntity);
         log.info("Curso com id: {} encontrado com sucesso.", id);
         return curso;
     }
@@ -73,6 +91,21 @@ public class CursoService {
 
     private CursoResponse cursoResponse(CursoEntity curso) {
         return new CursoResponse(curso.getId(), curso.getNome());
+    }
+
+    private CursoMateriasResponse cursoMateriasResponse(CursoEntity curso) {
+        List<MateriaEntity> materias = materiaRepository.findByCursoId(curso.getId());
+        List<MateriaResponse> materiaResponseList = new ArrayList<>();
+        for (MateriaEntity materia : materias) {
+            materiaResponseList.add(
+                    new MateriaResponse(materia.getId(), materia.getNome())
+            );
+        }
+        return new CursoMateriasResponse(
+                curso.getId(),
+                curso.getNome(),
+                materiaResponseList
+        );
     }
 
     private void validarDadosCurso(CursoRequest curso) throws Exception {
