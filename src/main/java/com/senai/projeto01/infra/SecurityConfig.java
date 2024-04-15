@@ -17,10 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.oauth2.jwt.JwtDecoder;
-import org.springframework.security.oauth2.jwt.JwtEncoder;
-import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
-import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
+import org.springframework.security.oauth2.jwt.*;
 import org.springframework.security.web.SecurityFilterChain;
 
 import java.security.interfaces.RSAPrivateKey;
@@ -44,15 +41,22 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/cadastro/**").hasAuthority("SCOPE_ADMIN")
                         .requestMatchers(HttpMethod.GET, "/usuarios/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/alunos/*/notas").hasAnyAuthority(
+                                "SCOPE_ADMIN", "SCOPE_PROFESSOR", "SCOPE_ALUNO"
+                        )
                         .requestMatchers(HttpMethod.DELETE, new String[] {
                                 "/docentes/**",
                                 "/cursos/**",
                                 "/materias/**",
                                 "/turmas/**",
-                                "/alunos/**"
+                                "/alunos/**",
+                                "/notas/**"
                         }).hasAuthority("SCOPE_ADMIN")
                         .requestMatchers("/docentes/**").hasAnyAuthority(
                                 "SCOPE_ADMIN", "SCOPE_PEDAGOGICO", "SCOPE_RECRUITER"
+                        )
+                        .requestMatchers("/notas/**").hasAnyAuthority(
+                                "SCOPE_ADMIN", "SCOPE_PROFESSOR"
                         )
                         .requestMatchers(new String[] {
                                 "/cursos/**",
