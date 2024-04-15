@@ -130,7 +130,7 @@ public class DocenteService {
 
         UsuarioResponse usuario = usuarioService.buscarPorId(docente.usuarioId());
         if (usuario.papel().equals("ALUNO")){
-            log.error("Data de entrada inválida.");
+            log.error("O papel deste usuário está como aluno e não pode ser cadastrado como docente.");
             throw new BadRequestException(
                     "Usuário não pode ser cadastrado como docente. "+
                     "O papel deste usuário está como aluno e não pode ser cadastrado como docente."
