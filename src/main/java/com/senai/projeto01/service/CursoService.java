@@ -86,7 +86,7 @@ public class CursoService {
         log.info("Excluindo curso com id: {}", id);
         buscarPorId(id);
         cursoRepository.deleteById(id);
-        log.info("Curso com id {} excluído sucesso.", id);
+        log.info("Curso com id {} excluído com sucesso.", id);
     }
 
     private CursoResponse cursoResponse(CursoEntity curso) {

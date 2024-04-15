@@ -78,7 +78,7 @@ public class TurmaService {
         log.info("Excluindo turma com id: {}", id);
         buscarPorId(id);
         turmaRepository.deleteById(id);
-        log.info("Turma com id {} excluída sucesso.", id);
+        log.info("Turma com id {} excluída com sucesso.", id);
     }
 
     private TurmaResponse turmaResponse(TurmaEntity turma) {

@@ -75,7 +75,7 @@ public class DocenteService {
         log.info("Excluindo docente com id: {}", id);
         buscarPorId(id);
         docenteRepository.deleteById(id);
-        log.info("Docente com id {} excluído sucesso.", id);
+        log.info("Docente com id {} excluído com sucesso.", id);
     }
 
     private DocenteResponse docenteResponse(DocenteEntity docente) {
