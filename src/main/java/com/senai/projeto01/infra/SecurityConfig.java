@@ -48,14 +48,16 @@ public class SecurityConfig {
                                 "/docentes/**",
                                 "/cursos/**",
                                 "/materias/**",
-                                "/turmas/**"
+                                "/turmas/**",
+                                "/alunos/**"
                         }).hasAuthority("SCOPE_ADMIN")
                         .requestMatchers("/docentes/**").hasAnyAuthority(
                                 "SCOPE_ADMIN", "SCOPE_PEDAGOGICO", "SCOPE_RECRUITER"
                         )
                         .requestMatchers(new String[] {
                                 "/cursos/**",
-                                "/turmas/**"
+                                "/turmas/**",
+                                "/alunos/**"
                         }).hasAnyAuthority("SCOPE_PEDAGOGICO", "SCOPE_ADMIN")
                         .requestMatchers("/materias/**").hasAnyAuthority("SCOPE_ADMIN")
                         .anyRequest().authenticated()
