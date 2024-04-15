@@ -4,6 +4,7 @@ import com.senai.projeto01.controller.dto.request.AlunoRequest;
 import com.senai.projeto01.controller.dto.response.*;
 import com.senai.projeto01.datasource.entity.*;
 import com.senai.projeto01.datasource.repository.AlunoRepository;
+import com.senai.projeto01.datasource.repository.NotaRepository;
 import com.senai.projeto01.datasource.repository.TurmaRepository;
 import com.senai.projeto01.datasource.repository.UsuarioRepository;
 import com.senai.projeto01.exception.NotFoundException;
@@ -26,6 +27,8 @@ public class AlunoService {
     private final UsuarioService usuarioService;
     private final TurmaService turmaService;
     private final TurmaRepository turmaRepository;
+    private final NotaRepository notaRepository;
+    private final TokenService tokenService;
 
     public List<AlunoResponse> buscarTodos() {
         log.info("Buscando todos os alunos.");
@@ -47,6 +50,27 @@ public class AlunoService {
                 }
         );
         AlunoResponse aluno = alunoResponse(alunoEntity);
+        log.info("Aluno com id: {} encontrado com sucesso.", id);
+        return aluno;
+    }
+
+    public AlunoComNotaResponse buscarPorIdComNotas(Long id, String token) throws Exception {
+        log.info("Buscando aluno com id: {} com suas notas.", id);
+        buscarPorId(id);
+        Long usuarioId = Long.valueOf(
+                tokenService.buscaCampo(token, "sub")
+        );
+        String usuarioScope = String.valueOf(
+                tokenService.buscaCampo(token, "scope")
+        );
+        AlunoEntity alunoEntity = alunoRepository.findById(id).orElseThrow();
+
+        if (usuarioScope.equals("ALUNO") && !usuarioId.equals(alunoEntity.getUsuario().getId())){
+            log.error("Você não tem acesso as notas do aluno com o id: {}.", id);
+            throw new Exception("Você não tem acesso as notas do aluno com o id: " + id);
+        }
+
+        AlunoComNotaResponse aluno = alunoComNotaResponse(alunoEntity);
         log.info("Aluno com id: {} encontrado com sucesso.", id);
         return aluno;
     }
@@ -77,25 +101,11 @@ public class AlunoService {
         log.info("Excluindo aluno com id: {}", id);
         buscarPorId(id);
         alunoRepository.deleteById(id);
-        log.info("Aluno com id {} excluído sucesso.", id);
+        log.info("Aluno com id {} excluído com sucesso.", id);
     }
 
     private AlunoResponse alunoResponse(AlunoEntity aluno) {
-        TurmaEntity turmaEntity = aluno.getTurma();
-        ProfessorResponse professor = new ProfessorResponse(
-                turmaEntity.getProfessor().getId(),
-                turmaEntity.getProfessor().getNome()
-        );
-        CursoResponse curso = new CursoResponse(
-                turmaEntity.getCurso().getId(),
-                turmaEntity.getCurso().getNome()
-        );
-        TurmaResponse turma = new TurmaResponse(
-                turmaEntity.getId(),
-                turmaEntity.getNome(),
-                professor,
-                curso
-        );
+        TurmaResponse turma = turmaResponse(aluno);
 
         return new AlunoResponse(
                 aluno.getId(),
@@ -105,6 +115,54 @@ public class AlunoService {
                 turma
         );
     }
+
+    private AlunoComNotaResponse alunoComNotaResponse(AlunoEntity aluno) {
+        List<NotaEntity> notasEntity = notaRepository.findAllByAlunoId(aluno.getId());
+        List<NotaSemAlunoResponse> notas = new ArrayList<>();
+        for (NotaEntity nota : notasEntity){
+            MateriaResponse materia = new MateriaResponse(
+                    nota.getMateria().getId(), nota.getMateria().getNome()
+            );
+            notas.add(new NotaSemAlunoResponse(
+                            nota.getId(),
+                            nota.getNota(),
+                            nota.getData(),
+                            materia
+            ));
+        }
+
+        return new AlunoComNotaResponse(
+                aluno.getId(),
+                aluno.getNome(),
+                aluno.getDataNascimento(),
+                aluno.getUsuario().getNomeUsuario(),
+                turmaResponse(aluno),
+                notas
+        );
+    }
+
+    private ProfessorResponse professorResponse(AlunoEntity aluno){
+        return new ProfessorResponse(
+                aluno.getTurma().getProfessor().getId(),
+                aluno.getTurma().getProfessor().getNome()
+        );
+    };
+
+    private CursoResponse cursoResponse(AlunoEntity aluno){
+        return new CursoResponse(
+                aluno.getTurma().getCurso().getId(),
+                aluno.getTurma().getCurso().getNome()
+        );
+    };
+
+    private TurmaResponse turmaResponse(AlunoEntity aluno){
+        return new TurmaResponse(
+                aluno.getTurma().getId(),
+                aluno.getTurma().getNome(),
+                professorResponse(aluno),
+                cursoResponse(aluno)
+        );
+    };
 
     private void validarDadosAluno(AlunoRequest aluno) throws Exception {
         log.info("Validando dados do aluno.");
