@@ -133,6 +133,7 @@ public class AlunoService {
             materias.add(nota.getMateria());
         }
 
+        log.info("Calculando pontuação.");
         Double pontuacao = (somaNotas / materias.size()) * 10;
 
         return new AlunoPontucaoResponse(
