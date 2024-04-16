@@ -98,6 +98,13 @@ public class TurmaService {
             );
         }
         cursoService.buscarPorId(turma.cursoId());
+        DocenteEntity docente = docenteRepository.findById(turma.professorId()).orElseThrow();
+        if (!docente.getUsuario().getPapel().getNome().equals("PROFESSOR")) {
+            log.error("Professor inválido.");
+            throw new BadRequestException(
+                    "Professor inválido, docente deve ter o papel de professor."
+            );
+        }
     }
 
     private TurmaEntity salvarTurma(Long id, TurmaRequest turmaRequest) throws Exception {
