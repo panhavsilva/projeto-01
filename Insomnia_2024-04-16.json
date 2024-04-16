@@ -1,0 +1,1517 @@
+{
+  "__export_date": "2024-04-16T19:52:32.450Z",
+  "__export_format": 4,
+  "__export_source": "insomnia.desktop.app:v8.6.1",
+  "_type": "export",
+  "resources": [
+    {
+      "_id": "req_5c1e0c7e2574456e910ec4eae3884d9a",
+      "parentId": "fld_0ad1127f16fc4ccfaf4139a54152ef5d",
+      "modified": 1712850708755,
+      "created": 1712846415981,
+      "url": "{{ _.baseUrl }}/docentes",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEyODgxOTg3LCJpYXQiOjE3MTI4NDU5ODcsInNjb3BlIjoiQURNSU4ifQ.TzBuX_GzCCufI73NIML9ba5Z2CXh-4XeR8YMtHeEBUvZae4ZclJEO3jhTO8jjhCkxbLZBh7uyEEHd7m4w3f-t1IXmSU62bgOhY5jqLkKLDsxjeTC48f_nhYpxPi5TXs56yH5m5eKdXEl6dVGAhVDz4WNLEaDoca1UHQJejEKUM-bXZ_V1eddQ6Dw0qTR8z3MZp8wsvhMKPZN9XDAEVIRH10oYZpAQcNM8BD1XI5mOT-SAWjoQVzQIP7BNFVu2_sFAV2iRm9I1J_aa1KfcIVEqBb6vxDYdKKhBc-oswYDI93uW9s-F87CXwYWaIn_V0WLqwJX3PonFnWTEpas7HDDHQ"
+      },
+      "metaSortKey": -1712846421782,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0ad1127f16fc4ccfaf4139a54152ef5d",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1712846402173,
+      "created": 1712846402173,
+      "name": "docente",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846402173,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "parentId": null,
+      "modified": 1712676400200,
+      "created": 1712676400200,
+      "name": "Projeto01 Módulo01",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_3901689fc35b45c9b615e62df56e719a",
+      "parentId": "fld_0ad1127f16fc4ccfaf4139a54152ef5d",
+      "modified": 1712850730652,
+      "created": 1712850702101,
+      "url": "{{ _.baseUrl }}/docentes/:id",
+      "name": "por id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEyODgxOTg3LCJpYXQiOjE3MTI4NDU5ODcsInNjb3BlIjoiQURNSU4ifQ.TzBuX_GzCCufI73NIML9ba5Z2CXh-4XeR8YMtHeEBUvZae4ZclJEO3jhTO8jjhCkxbLZBh7uyEEHd7m4w3f-t1IXmSU62bgOhY5jqLkKLDsxjeTC48f_nhYpxPi5TXs56yH5m5eKdXEl6dVGAhVDz4WNLEaDoca1UHQJejEKUM-bXZ_V1eddQ6Dw0qTR8z3MZp8wsvhMKPZN9XDAEVIRH10oYZpAQcNM8BD1XI5mOT-SAWjoQVzQIP7BNFVu2_sFAV2iRm9I1J_aa1KfcIVEqBb6vxDYdKKhBc-oswYDI93uW9s-F87CXwYWaIn_V0WLqwJX3PonFnWTEpas7HDDHQ"
+      },
+      "metaSortKey": -1712846400580.5,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2dbc6491e5e443a2b2eb5eea751a5094",
+      "parentId": "fld_0ad1127f16fc4ccfaf4139a54152ef5d",
+      "modified": 1712857832420,
+      "created": 1712853412576,
+      "url": "{{ _.baseUrl }}/docentes",
+      "name": "criar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Mary Doe\",\n\t\"dataEntrada\": \"2024-04-09\",\n\t\"usuarioId\": 4\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEyODgxOTg3LCJpYXQiOjE3MTI4NDU5ODcsInNjb3BlIjoiQURNSU4ifQ.TzBuX_GzCCufI73NIML9ba5Z2CXh-4XeR8YMtHeEBUvZae4ZclJEO3jhTO8jjhCkxbLZBh7uyEEHd7m4w3f-t1IXmSU62bgOhY5jqLkKLDsxjeTC48f_nhYpxPi5TXs56yH5m5eKdXEl6dVGAhVDz4WNLEaDoca1UHQJejEKUM-bXZ_V1eddQ6Dw0qTR8z3MZp8wsvhMKPZN9XDAEVIRH10oYZpAQcNM8BD1XI5mOT-SAWjoQVzQIP7BNFVu2_sFAV2iRm9I1J_aa1KfcIVEqBb6vxDYdKKhBc-oswYDI93uW9s-F87CXwYWaIn_V0WLqwJX3PonFnWTEpas7HDDHQ"
+      },
+      "metaSortKey": -1712846389979.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fd70d757736b485a824f3ace38f18eba",
+      "parentId": "fld_0ad1127f16fc4ccfaf4139a54152ef5d",
+      "modified": 1712856531535,
+      "created": 1712855965244,
+      "url": "{{ _.baseUrl }}/docentes/:id",
+      "name": "atualizar",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Mary Doe\",\n\t\"dataEntrada\": \"2024-04-09\",\n\t\"usuarioId\": 4\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEyODgxOTg3LCJpYXQiOjE3MTI4NDU5ODcsInNjb3BlIjoiQURNSU4ifQ.TzBuX_GzCCufI73NIML9ba5Z2CXh-4XeR8YMtHeEBUvZae4ZclJEO3jhTO8jjhCkxbLZBh7uyEEHd7m4w3f-t1IXmSU62bgOhY5jqLkKLDsxjeTC48f_nhYpxPi5TXs56yH5m5eKdXEl6dVGAhVDz4WNLEaDoca1UHQJejEKUM-bXZ_V1eddQ6Dw0qTR8z3MZp8wsvhMKPZN9XDAEVIRH10oYZpAQcNM8BD1XI5mOT-SAWjoQVzQIP7BNFVu2_sFAV2iRm9I1J_aa1KfcIVEqBb6vxDYdKKhBc-oswYDI93uW9s-F87CXwYWaIn_V0WLqwJX3PonFnWTEpas7HDDHQ"
+      },
+      "metaSortKey": -1712846388654.6562,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "2"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_061ce6597f5546b19d03180a30f9a39e",
+      "parentId": "fld_0ad1127f16fc4ccfaf4139a54152ef5d",
+      "modified": 1712856549984,
+      "created": 1712856527725,
+      "url": "{{ _.baseUrl }}/docentes/:id",
+      "name": "excluir",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEyODgxOTg3LCJpYXQiOjE3MTI4NDU5ODcsInNjb3BlIjoiQURNSU4ifQ.TzBuX_GzCCufI73NIML9ba5Z2CXh-4XeR8YMtHeEBUvZae4ZclJEO3jhTO8jjhCkxbLZBh7uyEEHd7m4w3f-t1IXmSU62bgOhY5jqLkKLDsxjeTC48f_nhYpxPi5TXs56yH5m5eKdXEl6dVGAhVDz4WNLEaDoca1UHQJejEKUM-bXZ_V1eddQ6Dw0qTR8z3MZp8wsvhMKPZN9XDAEVIRH10oYZpAQcNM8BD1XI5mOT-SAWjoQVzQIP7BNFVu2_sFAV2iRm9I1J_aa1KfcIVEqBb6vxDYdKKhBc-oswYDI93uW9s-F87CXwYWaIn_V0WLqwJX3PonFnWTEpas7HDDHQ"
+      },
+      "metaSortKey": -1712846387329.5625,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "2"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_21949eba4492469d9dec38ebc0e4c3a6",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713293284437,
+      "created": 1713142634181,
+      "url": "{{ _.baseUrl }}/alunos",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMzI5MjU4LCJpYXQiOjE3MTMyOTMyNTgsInNjb3BlIjoiQURNSU4ifQ.RsXS-D5NysH0DHQBsfizKJ1yQ2lAd2x8km74ycfSDSqktw-YTOzIjVDbza7JYBu7qf8BXCTQvdNswj_P9BkImCHQECKhnE5jUskfpNbgi4RJgvIAPxwPJHNCLQNw58j9KPmG2TFEf398Mh8mz_HXsz3bNGGqAvtKKfB0x8CcbyWUm7FuZpAJ5FdjnEY_H4nQGjYQb4akoSi-d9pd9sqTLCi42OKkj8Alu2HIXPB-n2mfWZ8tSwO5wc2D8ADg6q5cOBlBBOUdNI3FQnnVMvdjLmK7d1cGSBjaFxMEXzTPWHi4-iB-gEYHIfstzoW9fMSsS_ISFn6A7YOEdkRbMZehpw"
+      },
+      "metaSortKey": -1712846421782,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1713142634180,
+      "created": 1713142634180,
+      "name": "aluno",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846394880,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_5f0ac9b536fc4262a8348fe25c95252f",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713142791705,
+      "created": 1713142634184,
+      "url": "{{ _.baseUrl }}/alunos/:id",
+      "name": "por id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMTc4Nzc3LCJpYXQiOjE3MTMxNDI3NzcsInNjb3BlIjoiQURNSU4ifQ.vomvsOCnTDco75_OhtJxoBOCF_C7q73qpfB6tXphdET9t6woPntnpeF7J9UovzozFfNT2dXhs9pTulVx_A9ZOmBKmm16-ymD3jeNi80i-cyUM_KG9HZkb1Ta8npzO9PsXn8gVnYqua8zSHuCbZA2U_TEUUiOIzzn0cj_otY5qC5y5Zl9lcJhpo8ZlTEjnp0wmVTch5rQI6NuPC8PQjvIvmjoRpkoFCGyKK8b7D5IILWRIV5gjxZf1gZqOMhlpBMzcA0KgPTK9FFAEPFvXZrFTaqHaYvWv9RC90V6opC3NKklTbXuhb04xD07RRACuC1STIolQSYbgzh6mamzizEg8A"
+      },
+      "metaSortKey": -1712846400580.5,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2d976d07ade245228fad6b2368b9bab5",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713293472703,
+      "created": 1713209433303,
+      "url": "{{ _.baseUrl }}/alunos/:id/notas",
+      "name": "por id + notas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIyIiwiZXhwIjoxNzEzMzI5NDA0LCJpYXQiOjE3MTMyOTM0MDQsInNjb3BlIjoiQUxVTk8ifQ.xqnBc0nQpLUysbzByppEO0C3-bdhVn12fIwT_TMvkblcyF9uNuJbqXzEwa4FlRx0-jqj7BMGHZHu_TpZwwR6-k9Q-m1b3U6RqjJ8iGjknymFeCw1rD8ZE6YQ0UvV2FNbRSC_zrzfpJTNh6F7jZ1SPgFwpBJRfdKNZti4KnzMp1aI4HFE2hcjj1VE9ZgVb2vii9d5MTU1FxQEtz8fYJxeLo8qbEn00HeFkCmX-kWQ5vjdCac_22xt8_IEtlMhew0EM5p6bSpaANoEO-7rNEKuk6jY8oiC95vviYHPebhO0EaX9lg6FPUiKWvI9NRe8Wy2rT3muwz2KXg8XypJNZndLQ"
+      },
+      "metaSortKey": -1712846397930.3125,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_63cdac1ae1994c079ce33be94e35e148",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713296593229,
+      "created": 1713281352415,
+      "url": "{{ _.baseUrl }}/alunos/:id/pontuacao",
+      "name": "por id + pontuação",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiI1IiwiZXhwIjoxNzEzMzMyNTgzLCJpYXQiOjE3MTMyOTY1ODMsInNjb3BlIjoiQUxVTk8ifQ.1_z40MU9j2ni2MTlUs9MOaB4XRjmBXFPHfqvndN8A1S0VsT4Z5Nr5Bvfz1AKvDfBVpRMEkdRgpurW2Lqp4OMIq4WnqvWxQccqvcdr1qAW43C5jRDf4WXqTwtPSXeJZb3PnpVlKfu08xqSC5QXlXrx2hYBzPYmnumWhTa93VB78bIgy2Q2Drd3VQvHzPMt5Q8N4Qs2VjSnj_HJxcc7j8qVZMFwQzTieNMGm7l6s-a1rgzYOG5s2C1F1u133lw_SMqp7ArLZSSyhaH9-wmqibgV3DHNziNLwMaJcUU6R73UOrqfIhpYwDVuTHK0ylDXqqQ4CiiFNRxuLbmHxlAzNCEZg"
+      },
+      "metaSortKey": -1712846396605.2188,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ea83db25886b414d99e53273997e5f6d",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713142964416,
+      "created": 1713142634185,
+      "url": "{{ _.baseUrl }}/alunos",
+      "name": "criar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"João Silva\",\n\t\"dataNascimento\": \"1988-05-20\",\n\t\"usuarioId\": 5,\n\t\"turmaId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMTc4Nzc3LCJpYXQiOjE3MTMxNDI3NzcsInNjb3BlIjoiQURNSU4ifQ.vomvsOCnTDco75_OhtJxoBOCF_C7q73qpfB6tXphdET9t6woPntnpeF7J9UovzozFfNT2dXhs9pTulVx_A9ZOmBKmm16-ymD3jeNi80i-cyUM_KG9HZkb1Ta8npzO9PsXn8gVnYqua8zSHuCbZA2U_TEUUiOIzzn0cj_otY5qC5y5Zl9lcJhpo8ZlTEjnp0wmVTch5rQI6NuPC8PQjvIvmjoRpkoFCGyKK8b7D5IILWRIV5gjxZf1gZqOMhlpBMzcA0KgPTK9FFAEPFvXZrFTaqHaYvWv9RC90V6opC3NKklTbXuhb04xD07RRACuC1STIolQSYbgzh6mamzizEg8A"
+      },
+      "metaSortKey": -1712846389979.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6d581b2aec1d48188d778da875528ba8",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713143084493,
+      "created": 1713142634187,
+      "url": "{{ _.baseUrl }}/alunos/:id",
+      "name": "atualizar",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Maria Santos\",\n\t\"dataNascimento\": \"1988-05-20\",\n\t\"usuarioId\": 2,\n\t\"turmaId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMTc4Nzc3LCJpYXQiOjE3MTMxNDI3NzcsInNjb3BlIjoiQURNSU4ifQ.vomvsOCnTDco75_OhtJxoBOCF_C7q73qpfB6tXphdET9t6woPntnpeF7J9UovzozFfNT2dXhs9pTulVx_A9ZOmBKmm16-ymD3jeNi80i-cyUM_KG9HZkb1Ta8npzO9PsXn8gVnYqua8zSHuCbZA2U_TEUUiOIzzn0cj_otY5qC5y5Zl9lcJhpo8ZlTEjnp0wmVTch5rQI6NuPC8PQjvIvmjoRpkoFCGyKK8b7D5IILWRIV5gjxZf1gZqOMhlpBMzcA0KgPTK9FFAEPFvXZrFTaqHaYvWv9RC90V6opC3NKklTbXuhb04xD07RRACuC1STIolQSYbgzh6mamzizEg8A"
+      },
+      "metaSortKey": -1712846388654.6562,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a975ab29e55a418cbc1bb2395733e054",
+      "parentId": "fld_59cd9021d7f54a26af5bca6f664bd95b",
+      "modified": 1713142802346,
+      "created": 1713142634189,
+      "url": "{{ _.baseUrl }}/alunos/:id",
+      "name": "excluir",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMTc4Nzc3LCJpYXQiOjE3MTMxNDI3NzcsInNjb3BlIjoiQURNSU4ifQ.vomvsOCnTDco75_OhtJxoBOCF_C7q73qpfB6tXphdET9t6woPntnpeF7J9UovzozFfNT2dXhs9pTulVx_A9ZOmBKmm16-ymD3jeNi80i-cyUM_KG9HZkb1Ta8npzO9PsXn8gVnYqua8zSHuCbZA2U_TEUUiOIzzn0cj_otY5qC5y5Zl9lcJhpo8ZlTEjnp0wmVTch5rQI6NuPC8PQjvIvmjoRpkoFCGyKK8b7D5IILWRIV5gjxZf1gZqOMhlpBMzcA0KgPTK9FFAEPFvXZrFTaqHaYvWv9RC90V6opC3NKklTbXuhb04xD07RRACuC1STIolQSYbgzh6mamzizEg8A"
+      },
+      "metaSortKey": -1712846387329.5625,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "2"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b61bb580f84a4f6bb4babf700ca1a1c6",
+      "parentId": "fld_70f436f0414d4bb2bb63490a37f1f9cb",
+      "modified": 1713209191706,
+      "created": 1713202925177,
+      "url": "{{ _.baseUrl }}/notas",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846421782,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_70f436f0414d4bb2bb63490a37f1f9cb",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1713202925176,
+      "created": 1713202925176,
+      "name": "nota",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846391233.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_e8d83cc3206b40e29bf139dd758df9a6",
+      "parentId": "fld_70f436f0414d4bb2bb63490a37f1f9cb",
+      "modified": 1713209195485,
+      "created": 1713202925179,
+      "url": "{{ _.baseUrl }}/notas/:id",
+      "name": "por id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846400580.5,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3863cca9ab8445afbd6e97820a0a9c28",
+      "parentId": "fld_70f436f0414d4bb2bb63490a37f1f9cb",
+      "modified": 1713209293928,
+      "created": 1713202925180,
+      "url": "{{ _.baseUrl }}/notas",
+      "name": "criar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nota\": 7.0,\n\t\"alunoId\": 1,\n\t\"materiaId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846389979.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0c8392e13e2248ea8f2f967a121926ac",
+      "parentId": "fld_70f436f0414d4bb2bb63490a37f1f9cb",
+      "modified": 1713209321165,
+      "created": 1713202925182,
+      "url": "{{ _.baseUrl }}/notas/:id",
+      "name": "atualizar",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nota\": 8.0,\n\t\"alunoId\": 1,\n\t\"materiaId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846388654.6562,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "2"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_18513f13c190435da82f6c2152dbcb5a",
+      "parentId": "fld_70f436f0414d4bb2bb63490a37f1f9cb",
+      "modified": 1713209204247,
+      "created": 1713202925183,
+      "url": "{{ _.baseUrl }}/notas/:id",
+      "name": "excluir",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846387329.5625,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "2"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67193017fb974324a0f6bc07f9edc2ae",
+      "parentId": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "modified": 1713209148659,
+      "created": 1712929983769,
+      "url": "{{ _.baseUrl }}/cursos",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846421782,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1712929983766,
+      "created": 1712929983766,
+      "name": "curso",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846387587,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b6d40a8664544a08adb516c79b221c10",
+      "parentId": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "modified": 1713030929994,
+      "created": 1712929983772,
+      "url": "{{ _.baseUrl }}/cursos/:id",
+      "name": "por id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDY2NjQ4LCJpYXQiOjE3MTMwMzA2NDgsInNjb3BlIjoiQURNSU4ifQ.bbSN3EnGRJYx9Xq8n6UVyJQOcEUD5vpfoqY8IJWqYMFmfSUHLL2mE8jTZHwzfuGIlOQpXfgbVkh7eNdHlPTujGdie5eN4pX0VxGV0ReJ2jaV6Q2ZzZHCSThw_FebOHMhkbgRPRD0j00VH2iafmWPy7jGT3nGE57zbm7tiYlEKrJmN-AocJTYLV5SzqF-_wyX0m9xgmckjNSP5z6hTtR2tvpBd1sd-s6_8G-lXiukoLYfzyqoKKE97T5PcZqTaWK3yfOlLrKP7LOIG7MS-anLsE8IpcP933efZM5fXS3qXYzBfLTry9wJTnYc80guNKPYVYT61zjkWzgoiv4CsmXDxA"
+      },
+      "metaSortKey": -1712846400580.5,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_53e6f70f671f45178bf787c9195ca894",
+      "parentId": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "modified": 1713209164541,
+      "created": 1713034356598,
+      "url": "{{ _.baseUrl }}/cursos/:id/materias",
+      "name": "por id com materia",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMjQ1MTA1LCJpYXQiOjE3MTMyMDkxMDUsInNjb3BlIjoiQURNSU4ifQ.m5ZmZCG-rvhBYvniaxZXt9VeypqxcBmVyk0slrjQ1TuQr3tanVSNsxmilBJ5PMf8pP8mcneYNVyg-8xWRb-YdLdCprSawUT_NfuY7toOHvsykuN4qwzmdH28koahs_EcG51k9-FiE4QTM91AGOfAWQfhIPMqC7IdcjyCphyxyDRby22t9NxxYAmN-1EDgQizSeH26vHvV18kZKFRrgU2I51rgzD_6ZwYe5iL7XjVDpthvBlxtnhSCsS-QSUCGuf26bRtq6FDHvShet8LmSpO--lwtUxzISm2GyFkCZIKDDqdrGvpzrkjYPzq5IGzM8prHhVkVglhCPPVfekemMv7sw"
+      },
+      "metaSortKey": -1712846395280.125,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_25c4074f4e0d4af284a07739f0e5375e",
+      "parentId": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "modified": 1712932538387,
+      "created": 1712929983774,
+      "url": "{{ _.baseUrl }}/cursos",
+      "name": "criar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Futuro Dev\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiI0IiwiZXhwIjoxNzEyOTY4NTEyLCJpYXQiOjE3MTI5MzI1MTIsInNjb3BlIjoiUEVEQUdPR0lDTyJ9.eJgORVhRaw-4VNAHOUN6Vc11DliLiOpFfRpKPg3Ga1SbQQUxJouruhEUK54i78RPU-eeYlxwjfVqyqMtYvZA7LZfdjUfznNNblwk2GfYKs6mSNHlfcurNqA_MkKYOyzyPawVQStjs80CUc3fR553rnx2rnKvET99hudT2O2D86yf051iUYlfqSdQDhA_jFWRbWz45cT43SpmM91peSh3xoWBwLR7Kq16fawcU9RV0hUw36OpIqXApOh970jAUkpdtS77vl92SbWy6YNmdfkEKkoQULSNWEJsQ6l2CLgpJfuRSjDiViFtR5Um4mOb-DHiJfmGC4fTnvyjZbIOZ5x-YQ"
+      },
+      "metaSortKey": -1712846389979.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a4ab86a5a20e4b74a3807a49b48ddf01",
+      "parentId": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "modified": 1712932546690,
+      "created": 1712929983777,
+      "url": "{{ _.baseUrl }}/cursos/:id",
+      "name": "atualizar",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Futuro Futuro Dev\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiI0IiwiZXhwIjoxNzEyOTY4NTEyLCJpYXQiOjE3MTI5MzI1MTIsInNjb3BlIjoiUEVEQUdPR0lDTyJ9.eJgORVhRaw-4VNAHOUN6Vc11DliLiOpFfRpKPg3Ga1SbQQUxJouruhEUK54i78RPU-eeYlxwjfVqyqMtYvZA7LZfdjUfznNNblwk2GfYKs6mSNHlfcurNqA_MkKYOyzyPawVQStjs80CUc3fR553rnx2rnKvET99hudT2O2D86yf051iUYlfqSdQDhA_jFWRbWz45cT43SpmM91peSh3xoWBwLR7Kq16fawcU9RV0hUw36OpIqXApOh970jAUkpdtS77vl92SbWy6YNmdfkEKkoQULSNWEJsQ6l2CLgpJfuRSjDiViFtR5Um4mOb-DHiJfmGC4fTnvyjZbIOZ5x-YQ"
+      },
+      "metaSortKey": -1712846388654.6562,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "6"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2e12dc1fd87744819a807cb2ad3d836c",
+      "parentId": "fld_07294aa1dc344ceb8e6ce129e8930082",
+      "modified": 1712932555582,
+      "created": 1712929983780,
+      "url": "{{ _.baseUrl }}/cursos/:id",
+      "name": "excluir",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiI0IiwiZXhwIjoxNzEyOTY4NTEyLCJpYXQiOjE3MTI5MzI1MTIsInNjb3BlIjoiUEVEQUdPR0lDTyJ9.eJgORVhRaw-4VNAHOUN6Vc11DliLiOpFfRpKPg3Ga1SbQQUxJouruhEUK54i78RPU-eeYlxwjfVqyqMtYvZA7LZfdjUfznNNblwk2GfYKs6mSNHlfcurNqA_MkKYOyzyPawVQStjs80CUc3fR553rnx2rnKvET99hudT2O2D86yf051iUYlfqSdQDhA_jFWRbWz45cT43SpmM91peSh3xoWBwLR7Kq16fawcU9RV0hUw36OpIqXApOh970jAUkpdtS77vl92SbWy6YNmdfkEKkoQULSNWEJsQ6l2CLgpJfuRSjDiViFtR5Um4mOb-DHiJfmGC4fTnvyjZbIOZ5x-YQ"
+      },
+      "metaSortKey": -1712846387329.5625,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "7"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3b1b8b8a0c42402c99c61fe344db5202",
+      "parentId": "fld_22c5f652c5dd416aa8269a339215cf1f",
+      "modified": 1713030685968,
+      "created": 1713030632810,
+      "url": "{{ _.baseUrl }}/materias",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDY2NjQ4LCJpYXQiOjE3MTMwMzA2NDgsInNjb3BlIjoiQURNSU4ifQ.bbSN3EnGRJYx9Xq8n6UVyJQOcEUD5vpfoqY8IJWqYMFmfSUHLL2mE8jTZHwzfuGIlOQpXfgbVkh7eNdHlPTujGdie5eN4pX0VxGV0ReJ2jaV6Q2ZzZHCSThw_FebOHMhkbgRPRD0j00VH2iafmWPy7jGT3nGE57zbm7tiYlEKrJmN-AocJTYLV5SzqF-_wyX0m9xgmckjNSP5z6hTtR2tvpBd1sd-s6_8G-lXiukoLYfzyqoKKE97T5PcZqTaWK3yfOlLrKP7LOIG7MS-anLsE8IpcP933efZM5fXS3qXYzBfLTry9wJTnYc80guNKPYVYT61zjkWzgoiv4CsmXDxA"
+      },
+      "metaSortKey": -1712846421782,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_22c5f652c5dd416aa8269a339215cf1f",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1713030632808,
+      "created": 1713030632808,
+      "name": "matéria",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846380294,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9e779522e92a4ee5a05fcd22252a0cd5",
+      "parentId": "fld_22c5f652c5dd416aa8269a339215cf1f",
+      "modified": 1713030691791,
+      "created": 1713030632811,
+      "url": "{{ _.baseUrl }}/materias/:id",
+      "name": "por id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDY2NjQ4LCJpYXQiOjE3MTMwMzA2NDgsInNjb3BlIjoiQURNSU4ifQ.bbSN3EnGRJYx9Xq8n6UVyJQOcEUD5vpfoqY8IJWqYMFmfSUHLL2mE8jTZHwzfuGIlOQpXfgbVkh7eNdHlPTujGdie5eN4pX0VxGV0ReJ2jaV6Q2ZzZHCSThw_FebOHMhkbgRPRD0j00VH2iafmWPy7jGT3nGE57zbm7tiYlEKrJmN-AocJTYLV5SzqF-_wyX0m9xgmckjNSP5z6hTtR2tvpBd1sd-s6_8G-lXiukoLYfzyqoKKE97T5PcZqTaWK3yfOlLrKP7LOIG7MS-anLsE8IpcP933efZM5fXS3qXYzBfLTry9wJTnYc80guNKPYVYT61zjkWzgoiv4CsmXDxA"
+      },
+      "metaSortKey": -1712846400580.5,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_96a253a931ea4057a15fbb160e1fb91e",
+      "parentId": "fld_22c5f652c5dd416aa8269a339215cf1f",
+      "modified": 1713034413448,
+      "created": 1713030632813,
+      "url": "{{ _.baseUrl }}/materias",
+      "name": "criar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"HTML\",\n\t\"cursoId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDY2NjQ4LCJpYXQiOjE3MTMwMzA2NDgsInNjb3BlIjoiQURNSU4ifQ.bbSN3EnGRJYx9Xq8n6UVyJQOcEUD5vpfoqY8IJWqYMFmfSUHLL2mE8jTZHwzfuGIlOQpXfgbVkh7eNdHlPTujGdie5eN4pX0VxGV0ReJ2jaV6Q2ZzZHCSThw_FebOHMhkbgRPRD0j00VH2iafmWPy7jGT3nGE57zbm7tiYlEKrJmN-AocJTYLV5SzqF-_wyX0m9xgmckjNSP5z6hTtR2tvpBd1sd-s6_8G-lXiukoLYfzyqoKKE97T5PcZqTaWK3yfOlLrKP7LOIG7MS-anLsE8IpcP933efZM5fXS3qXYzBfLTry9wJTnYc80guNKPYVYT61zjkWzgoiv4CsmXDxA"
+      },
+      "metaSortKey": -1712846389979.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b8da566294654c98afc2877e69f2eeea",
+      "parentId": "fld_22c5f652c5dd416aa8269a339215cf1f",
+      "modified": 1713032238321,
+      "created": 1713030632815,
+      "url": "{{ _.baseUrl }}/materias/:id",
+      "name": "atualizar",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"JS\",\n\t\"cursoId\": 3\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDY2NjQ4LCJpYXQiOjE3MTMwMzA2NDgsInNjb3BlIjoiQURNSU4ifQ.bbSN3EnGRJYx9Xq8n6UVyJQOcEUD5vpfoqY8IJWqYMFmfSUHLL2mE8jTZHwzfuGIlOQpXfgbVkh7eNdHlPTujGdie5eN4pX0VxGV0ReJ2jaV6Q2ZzZHCSThw_FebOHMhkbgRPRD0j00VH2iafmWPy7jGT3nGE57zbm7tiYlEKrJmN-AocJTYLV5SzqF-_wyX0m9xgmckjNSP5z6hTtR2tvpBd1sd-s6_8G-lXiukoLYfzyqoKKE97T5PcZqTaWK3yfOlLrKP7LOIG7MS-anLsE8IpcP933efZM5fXS3qXYzBfLTry9wJTnYc80guNKPYVYT61zjkWzgoiv4CsmXDxA"
+      },
+      "metaSortKey": -1712846388654.6562,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "3"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_81c9e46f6d61446d9cdfa6051a5776a6",
+      "parentId": "fld_22c5f652c5dd416aa8269a339215cf1f",
+      "modified": 1713032259346,
+      "created": 1713030632817,
+      "url": "{{ _.baseUrl }}/materias/:id",
+      "name": "excluir",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDY2NjQ4LCJpYXQiOjE3MTMwMzA2NDgsInNjb3BlIjoiQURNSU4ifQ.bbSN3EnGRJYx9Xq8n6UVyJQOcEUD5vpfoqY8IJWqYMFmfSUHLL2mE8jTZHwzfuGIlOQpXfgbVkh7eNdHlPTujGdie5eN4pX0VxGV0ReJ2jaV6Q2ZzZHCSThw_FebOHMhkbgRPRD0j00VH2iafmWPy7jGT3nGE57zbm7tiYlEKrJmN-AocJTYLV5SzqF-_wyX0m9xgmckjNSP5z6hTtR2tvpBd1sd-s6_8G-lXiukoLYfzyqoKKE97T5PcZqTaWK3yfOlLrKP7LOIG7MS-anLsE8IpcP933efZM5fXS3qXYzBfLTry9wJTnYc80guNKPYVYT61zjkWzgoiv4CsmXDxA"
+      },
+      "metaSortKey": -1712846387329.5625,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "5"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ff1c06d421dc4581ba5db14fba1ccecf",
+      "parentId": "fld_2048af7608804435b9dd050b3d899fa4",
+      "modified": 1713143073560,
+      "created": 1713043208108,
+      "url": "{{ _.baseUrl }}/turmas",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMTc4Nzc3LCJpYXQiOjE3MTMxNDI3NzcsInNjb3BlIjoiQURNSU4ifQ.vomvsOCnTDco75_OhtJxoBOCF_C7q73qpfB6tXphdET9t6woPntnpeF7J9UovzozFfNT2dXhs9pTulVx_A9ZOmBKmm16-ymD3jeNi80i-cyUM_KG9HZkb1Ta8npzO9PsXn8gVnYqua8zSHuCbZA2U_TEUUiOIzzn0cj_otY5qC5y5Zl9lcJhpo8ZlTEjnp0wmVTch5rQI6NuPC8PQjvIvmjoRpkoFCGyKK8b7D5IILWRIV5gjxZf1gZqOMhlpBMzcA0KgPTK9FFAEPFvXZrFTaqHaYvWv9RC90V6opC3NKklTbXuhb04xD07RRACuC1STIolQSYbgzh6mamzizEg8A"
+      },
+      "metaSortKey": -1712846421782,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2048af7608804435b9dd050b3d899fa4",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1713043208107,
+      "created": 1713043208107,
+      "name": "turma",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846376647.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_00ce51c0557846079c25e6554693f989",
+      "parentId": "fld_2048af7608804435b9dd050b3d899fa4",
+      "modified": 1713044823387,
+      "created": 1713043208110,
+      "url": "{{ _.baseUrl }}/turmas/:id",
+      "name": "por id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDgwNzg3LCJpYXQiOjE3MTMwNDQ3ODcsInNjb3BlIjoiQURNSU4ifQ.0ybN-Ffnjz13NG394muECl3Dgi7TEHXIIS5WJMJQT_lRmvKZBDxvRKI4aKpyDm-V0S-XnQ3e4Znia2-23W_HvlEd-XoY4TUu4SFyWkdyQsqx-L4Yf9uGuuqKieFI3EOq_ygdWe_dzNbI1eeV61RTQCKY0oAV42AE4Z4P_q7yhgp3NyXbGRnBwuGaDzkjYKNrqq8oIANSN4QjOK4DImnYP5v8X80OkYUFuV0CZQdr8VfaS03koYUSd4yinga8N3YXaFovwhi7qRgBVZuMMcOF6eid-i7x3mj0a2gmbaqwOcm23_xksl4lr5CxEMco4lqGm6s6z7bTFlcCGht9L5Mcqg"
+      },
+      "metaSortKey": -1712846400580.5,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_aee1bc118460442eb68d8c64e56457fd",
+      "parentId": "fld_2048af7608804435b9dd050b3d899fa4",
+      "modified": 1713044940084,
+      "created": 1713043208111,
+      "url": "{{ _.baseUrl }}/turmas",
+      "name": "criar",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"Education\",\n\t\"professorId\": 1,\n\t\"cursoId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDgwNzg3LCJpYXQiOjE3MTMwNDQ3ODcsInNjb3BlIjoiQURNSU4ifQ.0ybN-Ffnjz13NG394muECl3Dgi7TEHXIIS5WJMJQT_lRmvKZBDxvRKI4aKpyDm-V0S-XnQ3e4Znia2-23W_HvlEd-XoY4TUu4SFyWkdyQsqx-L4Yf9uGuuqKieFI3EOq_ygdWe_dzNbI1eeV61RTQCKY0oAV42AE4Z4P_q7yhgp3NyXbGRnBwuGaDzkjYKNrqq8oIANSN4QjOK4DImnYP5v8X80OkYUFuV0CZQdr8VfaS03koYUSd4yinga8N3YXaFovwhi7qRgBVZuMMcOF6eid-i7x3mj0a2gmbaqwOcm23_xksl4lr5CxEMco4lqGm6s6z7bTFlcCGht9L5Mcqg"
+      },
+      "metaSortKey": -1712846389979.75,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ac9ae5e93aae46eb90498015d1c957eb",
+      "parentId": "fld_2048af7608804435b9dd050b3d899fa4",
+      "modified": 1713045361684,
+      "created": 1713043208114,
+      "url": "{{ _.baseUrl }}/turmas/:id",
+      "name": "atualizar",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nome\": \"2024\",\n\t\"professorId\": 1,\n\t\"cursoId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDgwNzg3LCJpYXQiOjE3MTMwNDQ3ODcsInNjb3BlIjoiQURNSU4ifQ.0ybN-Ffnjz13NG394muECl3Dgi7TEHXIIS5WJMJQT_lRmvKZBDxvRKI4aKpyDm-V0S-XnQ3e4Znia2-23W_HvlEd-XoY4TUu4SFyWkdyQsqx-L4Yf9uGuuqKieFI3EOq_ygdWe_dzNbI1eeV61RTQCKY0oAV42AE4Z4P_q7yhgp3NyXbGRnBwuGaDzkjYKNrqq8oIANSN4QjOK4DImnYP5v8X80OkYUFuV0CZQdr8VfaS03koYUSd4yinga8N3YXaFovwhi7qRgBVZuMMcOF6eid-i7x3mj0a2gmbaqwOcm23_xksl4lr5CxEMco4lqGm6s6z7bTFlcCGht9L5Mcqg"
+      },
+      "metaSortKey": -1712846388654.6562,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4bd14f325cf649afa7dbbce4e39ff920",
+      "parentId": "fld_2048af7608804435b9dd050b3d899fa4",
+      "modified": 1713045376695,
+      "created": 1713043208115,
+      "url": "{{ _.baseUrl }}/turmas/:id",
+      "name": "excluir",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMDgwNzg3LCJpYXQiOjE3MTMwNDQ3ODcsInNjb3BlIjoiQURNSU4ifQ.0ybN-Ffnjz13NG394muECl3Dgi7TEHXIIS5WJMJQT_lRmvKZBDxvRKI4aKpyDm-V0S-XnQ3e4Znia2-23W_HvlEd-XoY4TUu4SFyWkdyQsqx-L4Yf9uGuuqKieFI3EOq_ygdWe_dzNbI1eeV61RTQCKY0oAV42AE4Z4P_q7yhgp3NyXbGRnBwuGaDzkjYKNrqq8oIANSN4QjOK4DImnYP5v8X80OkYUFuV0CZQdr8VfaS03koYUSd4yinga8N3YXaFovwhi7qRgBVZuMMcOF6eid-i7x3mj0a2gmbaqwOcm23_xksl4lr5CxEMco4lqGm6s6z7bTFlcCGht9L5Mcqg"
+      },
+      "metaSortKey": -1712846387329.5625,
+      "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": "2"
+        }
+      ],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d561c468dd2f4949aa32f2127fac6ba0",
+      "parentId": "fld_c6a94640bc194f0183821d8aabc62fef",
+      "modified": 1713142948963,
+      "created": 1712713761338,
+      "url": "{{ _.baseUrl }}/cadastro",
+      "name": "cadastro",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nomeUsuario\": \"aluno2\",\n\t\"senha\": \"123\",\n\t\"nomePapel\": \"ALUNO\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMTc4Nzc3LCJpYXQiOjE3MTMxNDI3NzcsInNjb3BlIjoiQURNSU4ifQ.vomvsOCnTDco75_OhtJxoBOCF_C7q73qpfB6tXphdET9t6woPntnpeF7J9UovzozFfNT2dXhs9pTulVx_A9ZOmBKmm16-ymD3jeNi80i-cyUM_KG9HZkb1Ta8npzO9PsXn8gVnYqua8zSHuCbZA2U_TEUUiOIzzn0cj_otY5qC5y5Zl9lcJhpo8ZlTEjnp0wmVTch5rQI6NuPC8PQjvIvmjoRpkoFCGyKK8b7D5IILWRIV5gjxZf1gZqOMhlpBMzcA0KgPTK9FFAEPFvXZrFTaqHaYvWv9RC90V6opC3NKklTbXuhb04xD07RRACuC1STIolQSYbgzh6mamzizEg8A"
+      },
+      "metaSortKey": -1712846379354,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c6a94640bc194f0183821d8aabc62fef",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1712846373000,
+      "created": 1712846373000,
+      "name": "usuário",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1712846373001,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_91f9b33037db47b3ae83afb0e4939708",
+      "parentId": "fld_c6a94640bc194f0183821d8aabc62fef",
+      "modified": 1713293334069,
+      "created": 1712716607165,
+      "url": "{{ _.baseUrl }}/usuarios",
+      "name": "todos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWJhY2tlbmQiLCJzdWIiOiIxIiwiZXhwIjoxNzEzMzI5MjU4LCJpYXQiOjE3MTMyOTMyNTgsInNjb3BlIjoiQURNSU4ifQ.RsXS-D5NysH0DHQBsfizKJ1yQ2lAd2x8km74ycfSDSqktw-YTOzIjVDbza7JYBu7qf8BXCTQvdNswj_P9BkImCHQECKhnE5jUskfpNbgi4RJgvIAPxwPJHNCLQNw58j9KPmG2TFEf398Mh8mz_HXsz3bNGGqAvtKKfB0x8CcbyWUm7FuZpAJ5FdjnEY_H4nQGjYQb4akoSi-d9pd9sqTLCi42OKkj8Alu2HIXPB-n2mfWZ8tSwO5wc2D8ADg6q5cOBlBBOUdNI3FQnnVMvdjLmK7d1cGSBjaFxMEXzTPWHi4-iB-gEYHIfstzoW9fMSsS_ISFn6A7YOEdkRbMZehpw"
+      },
+      "metaSortKey": -1712846379329,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9f8caa13ce9540bab9cc856e69184408",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1712676569925,
+      "created": 1712676448353,
+      "url": "{{ _.baseUrl }}/teste",
+      "name": "test",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "dummy",
+        "password": "123"
+      },
+      "metaSortKey": -1712676448353,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d9651d6a4fa64040aafcf56595fcef21",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1713296582249,
+      "created": 1712703690481,
+      "url": "{{ _.baseUrl }}/login",
+      "name": "login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"nomeUsuario\": \"aluno2\",\n\t\"senha\": \"123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1712676448253,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_04534d7cfbcbee147bda1a104418462dcf874f83",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1712676439423,
+      "created": 1712676400207,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:8080"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1712676400207,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_04534d7cfbcbee147bda1a104418462dcf874f83",
+      "parentId": "wrk_c0d27214369540b69d86887e37cf8fd0",
+      "modified": 1712676400210,
+      "created": 1712676400210,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
