@@ -39,31 +39,24 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET,"/teste").permitAll()
                         .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/cadastro/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/cadastro").hasAuthority("SCOPE_ADMIN")
                         .requestMatchers(HttpMethod.GET, "/usuarios/**").hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/**/**").hasAuthority("SCOPE_ADMIN")
                         .requestMatchers(HttpMethod.GET, "/alunos/*/notas").hasAnyAuthority(
                                 "SCOPE_ADMIN", "SCOPE_PROFESSOR", "SCOPE_ALUNO"
                         )
-                        .requestMatchers(HttpMethod.DELETE, new String[] {
-                                "/docentes/**",
-                                "/cursos/**",
-                                "/materias/**",
-                                "/turmas/**",
-                                "/alunos/**",
-                                "/notas/**"
-                        }).hasAuthority("SCOPE_ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/alunos/*/pontuacao").hasAnyAuthority(
+                                "SCOPE_ADMIN", "SCOPE_ALUNO"
+                        )
                         .requestMatchers("/docentes/**").hasAnyAuthority(
                                 "SCOPE_ADMIN", "SCOPE_PEDAGOGICO", "SCOPE_RECRUITER"
                         )
                         .requestMatchers("/notas/**").hasAnyAuthority(
                                 "SCOPE_ADMIN", "SCOPE_PROFESSOR"
                         )
-                        .requestMatchers(new String[] {
-                                "/cursos/**",
-                                "/turmas/**",
-                                "/alunos/**"
-                        }).hasAnyAuthority("SCOPE_PEDAGOGICO", "SCOPE_ADMIN")
-                        .requestMatchers("/materias/**").hasAnyAuthority("SCOPE_ADMIN")
+                        .requestMatchers(new String[] {"/cursos/**", "/turmas/**", "/alunos/**"}).hasAnyAuthority(
+                                "SCOPE_PEDAGOGICO", "SCOPE_ADMIN"
+                        )
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)
