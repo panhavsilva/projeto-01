@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.BadRequestException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,7 @@ import java.time.Instant;
 public class TokenService {
     private final BCryptPasswordEncoder bCryptEncoder;
     private final JwtEncoder jwtEncoder;
+    private final JwtDecoder jwtDencoder;
     private final UsuarioRepository usuarioRepository;
     private static long TEMPO_EXPIRACAO = 36000L;
 
@@ -51,5 +53,9 @@ public class TokenService {
                 .build();
 
         return jwtEncoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();
+    }
+
+    public String buscaCampo(String token, String claim) {
+        return jwtDencoder.decode(token).getClaims().get(claim).toString();
     }
 }

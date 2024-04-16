@@ -73,7 +73,7 @@ public class MateriaService {
         log.info("Excluindo matéria com id: {}", id);
         buscarPorId(id);
         materiaRepository.deleteById(id);
-        log.info("Matéria com id {} excluída sucesso.", id);
+        log.info("Matéria com id {} excluída com sucesso.", id);
     }
 
     private MateriaComCursoResponse materiaResponse(MateriaEntity materia) {
