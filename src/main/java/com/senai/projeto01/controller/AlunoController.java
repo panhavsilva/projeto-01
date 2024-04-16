@@ -2,6 +2,7 @@ package com.senai.projeto01.controller;
 
 import com.senai.projeto01.controller.dto.request.AlunoRequest;
 import com.senai.projeto01.controller.dto.response.AlunoComNotaResponse;
+import com.senai.projeto01.controller.dto.response.AlunoPontucaoResponse;
 import com.senai.projeto01.controller.dto.response.AlunoResponse;
 import com.senai.projeto01.service.AlunoService;
 import lombok.RequiredArgsConstructor;
@@ -39,6 +40,15 @@ public class AlunoController {
     ) throws Exception {
         log.info("GET /alunos/:id/notas - solicitação recebida para buscar aluno com id {} e suas notas.", id);
         return ResponseEntity.ok().body(service.buscarPorIdComNotas(id, token.substring(7)));
+    }
+
+    @GetMapping("{id}/pontuacao")
+    public ResponseEntity<AlunoPontucaoResponse> getPorIdPontuacao(
+            @PathVariable Long id,
+            @RequestHeader(name = "Authorization") String token
+    ) throws Exception {
+        log.info("GET /alunos/:id/pontuacao - solicitação recebida para buscar aluno com id {} e sua pontuação.", id);
+        return ResponseEntity.ok().body(service.buscarPorIdPontuacao(id, token.substring(7)));
     }
 
     @PostMapping

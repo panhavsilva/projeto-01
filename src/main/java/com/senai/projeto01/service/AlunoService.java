@@ -16,7 +16,9 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Slf4j
 @Service
@@ -57,20 +59,23 @@ public class AlunoService {
     public AlunoComNotaResponse buscarPorIdComNotas(Long id, String token) throws Exception {
         log.info("Buscando aluno com id: {} com suas notas.", id);
         buscarPorId(id);
-        Long usuarioId = Long.valueOf(
-                tokenService.buscaCampo(token, "sub")
-        );
-        String usuarioScope = String.valueOf(
-                tokenService.buscaCampo(token, "scope")
-        );
-        AlunoEntity alunoEntity = alunoRepository.findById(id).orElseThrow();
 
-        if (usuarioScope.equals("ALUNO") && !usuarioId.equals(alunoEntity.getUsuario().getId())){
-            log.error("Você não tem acesso as notas do aluno com o id: {}.", id);
-            throw new Exception("Você não tem acesso as notas do aluno com o id: " + id);
-        }
+        AlunoEntity alunoEntity = alunoRepository.findById(id).orElseThrow();
+        validarPermisaoAluno(id, token, alunoEntity);
 
         AlunoComNotaResponse aluno = alunoComNotaResponse(alunoEntity);
+        log.info("Aluno com id: {} encontrado com sucesso.", id);
+        return aluno;
+    }
+
+    public AlunoPontucaoResponse buscarPorIdPontuacao(Long id, String token) throws Exception {
+        log.info("Buscando aluno com id: {} com sua pontuação.", id);
+        buscarPorId(id);
+
+        AlunoEntity alunoEntity = alunoRepository.findById(id).orElseThrow();
+        validarPermisaoAluno(id, token, alunoEntity);
+
+        AlunoPontucaoResponse aluno = alunoPontucaoResponse(alunoEntity);
         log.info("Aluno com id: {} encontrado com sucesso.", id);
         return aluno;
     }
@@ -113,6 +118,30 @@ public class AlunoService {
                 aluno.getDataNascimento(),
                 aluno.getUsuario().getNomeUsuario(),
                 turma
+        );
+    }
+
+    private AlunoPontucaoResponse alunoPontucaoResponse(AlunoEntity aluno) {
+        List<NotaEntity> notas = notaRepository.findAllByAlunoId(aluno.getId());
+        double somaNotas = 0.0;
+        for (NotaEntity nota : notas) {
+            somaNotas += nota.getNota();
+        }
+
+        Set<MateriaEntity> materias = new HashSet<>();
+        for (NotaEntity nota : notas) {
+            materias.add(nota.getMateria());
+        }
+
+        log.info("Calculando pontuação.");
+        Double pontuacao = (somaNotas / materias.size()) * 10;
+
+        return new AlunoPontucaoResponse(
+                aluno.getId(),
+                aluno.getNome(),
+                aluno.getDataNascimento(),
+                aluno.getUsuario().getNomeUsuario(),
+                pontuacao
         );
     }
 
@@ -202,6 +231,20 @@ public class AlunoService {
                     "Usuário não pode ser cadastrado como aluno. "+
                     "O papel do usuário deve estar como aluno para ser cadastrado como aluno."
             );
+        }
+    }
+
+    private void validarPermisaoAluno(Long id, String token, AlunoEntity alunoEntity) throws Exception {
+        Long usuarioId = Long.valueOf(
+                tokenService.buscaCampo(token, "sub")
+        );
+        String usuarioScope = String.valueOf(
+                tokenService.buscaCampo(token, "scope")
+        );
+
+        if (usuarioScope.equals("ALUNO") && !usuarioId.equals(alunoEntity.getUsuario().getId())){
+            log.error("Você não tem acesso as informações do aluno com o id: {}.", id);
+            throw new Exception("Você não tem acesso as informações do aluno com o id: " + id);
         }
     }
 
